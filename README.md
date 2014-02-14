@@ -24,4 +24,16 @@ In order to run project for development in web browser, you need:
 
 #Run as Android App
 
+To run the project as an Android App is a bit more complex.
+
+1. Have Java SDK/[JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) installed and added to environment PATH
+2. Have [Ant](http://ant.apache.org/) installed and added to environment PATH
+3. Have [adt](http://developer.android.com/sdk/installing/bundle.html) bundle install and both folder `sdk\platform-tools`, `sdk\tools` from the bundle added to environment PATH
+4. Have [git](http://git-scm.com/) installed
+5. Have cordova installed with `npm install cordova -g`
+6. Either run an Android Emulator or plugin in your Android phone with USB debug enabled.
+7. Navigate to the root folder of the project and execute cmd `cordova add android`
+8. From now on, execute `cordova run android` every times you wish to deploy app to android device.
+
 *To be updated*
+%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.7.0_05\bin;E:\Softs\apache-ant-1.9.3\bin;E:\Softs\adt-bundle-windows-x86_64-20130917\sdk\platform-tools;E:\Softs\adt-bundle-windows-x86_64-20130917\sdk\tools;C:\Program Files (x86)\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Program Files\TortoiseGit\bin
