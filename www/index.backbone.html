@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!-- build:css ../css/index.css -->
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <!-- /build -->
+        <title>Hello World</title>
+    </head>
+    <body id="app">
+        <div id="multi-table" class="wrap">
+            
+        </div>
+
+        <!-- <div class="container">
+            <div class="multip-table">
+                <div class="multip-table-cell">
+                    <span ng-class="cell-value-a">2</span>
+                    <span ng-class="cell-value-b">1</span>
+                    <span ng-class="cell-value-result">2</span>
+                </div>
+                <div class="multip-table-cell">
+                    <span ng-class="cell-value-a">2</span>
+                    <span ng-class="cell-value-b">1</span>
+                    <span ng-class="cell-value-result">2</span>
+                </div>
+                <div class="multip-table-cell">
+                    <span ng-class="cell-value-a">2</span>
+                    <span ng-class="cell-value-b">1</span>
+                    <span ng-class="cell-value-result">2</span>
+                </div>
+            </div>
+        </div>
+        <a href="#">test</a>
+        <a href="#/test1">test1</a>
+        <a href="#/test3">test3</a> -->
+        
+        <script id="template-cell" type="text/template">
+            <div class="box <%- countDigits() > 1 ? 'box-2' : '' %> <%- get('selected') ? 'box--selected' : '' %>">
+              <div class="boxInner <%- get('color') %>">
+                <span class="value-a"><%- get('a') %></span>
+                <span class="value-b"><%- get('b') %></span>               
+                <div class="titleBox">
+                    <span class="value-result">
+                        <%- getResult() %>
+                    </span>
+                </div>
+              </div>
+            </div>
+        </script>        
+        <!-- build:js script.js -->         
+        <script data-main="js/r-config" src="components/requirejs/require.js"></script>
+        <!-- /build -->
+    </body>
+</html>
+

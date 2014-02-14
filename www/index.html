@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="format-detection" content="telephone=no"><meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"><link rel="stylesheet" href="build/style.css"><title>Multiplication Table</title></head><body id="app"><img src="img/4Vs44ZW-small.jpg" alt="" class="bg"><div id="index-page" class="wrap page"></div><div id="detail-page" class="single-table-wrap page"></div><script id="template-cell" type="text/template"><div class="box {boxClass}">              
+              <div class="boxInner {color}">
+                <span class="value-a">{a}</span>
+                <span class="value-b">{b}</span>               
+                <div class="titleBox">
+                    <span class="value-result">
+                        {result}
+                    </span>
+                </div>
+              </div>              
+            </div></script><script id="template-single" type="text/template"><div class="single-table-row {color}">
+                <span class="single-table-value-a">
+                    {a}
+                </span>
+                <span class="single-table-value-b">
+                    {b}
+                </span>
+                <span class="single-table-value-result">
+                    {result}
+                </span>                
+            </div></script><script src="build/script.js"></script><script>app({
+            page: location.hash.slice(2),
+            root: $$("body"),
+            debug: true,
+            cache: false
+          });</script></body></html>

@@ -1,0 +1,23 @@
+{
+  "name": "router",
+  "version": "0.0.1",
+  "main": "server.coffee",
+  "repository": "",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "coffee-script": "1.6.3"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-coffee": "~0.8.0",
+    "grunt-newer": "~0.6.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-uncss": "~0.1.6",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-processhtml": "~0.2.7",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-uglify": "~0.3.1",
+    "grunt-contrib-htmlmin": "~0.1.3"
+  }
+}

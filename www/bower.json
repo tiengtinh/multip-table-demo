@@ -1,0 +1,22 @@
+{
+  "name": "captionistic",
+  "version": "0.0.1",
+  "authors": [
+    "tinh"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "www/js/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {   
+    "requirejs": "~2.1.10",            
+    "almond": "~0.2.9",
+    "quojs": "~2.3.6",
+    "riotjs": "~0.9.8"
+  }
+}
