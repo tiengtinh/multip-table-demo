@@ -3,7 +3,7 @@ Multiplication Table App Demo
 
 PhoneGap multiplication table app. Run on web browsers and mobile devices.
 
-~Believe it or not. The whole project on production is only `40.0KB` thanks to micro javascript framework [riotjs](https://github.com/moot/riotjs), [quojs](http://quojs.tapquo.com/).
+*Believe it or not. The whole project on production is only `40.0KB` thanks to micro javascript framework [riotjs](https://github.com/moot/riotjs), [quojs](http://quojs.tapquo.com/).*
 
 # Screenshot
 ![TodoMVC](screenshot.png)
@@ -11,7 +11,7 @@ PhoneGap multiplication table app. Run on web browsers and mobile devices.
 #Run demo
 You can run the project directly by opening the index.html file in the browser.
 
-#WDevelopment on Web
+#Run on Web
 
 Inorder to run project for development in web browser, you need:
 
