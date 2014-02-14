@@ -6,11 +6,19 @@ module.exports = (grunt) ->
       coffee:
         files: "coffee/**/*.coffee"
         tasks: ["newer:coffee:compile"]
+      livereload:
+        options:
+          livereload: 35729
+        files: [
+          'index.dev.html'
+          'css/**/*.css'
+          'js/**/*.js'
+        ]
 
     coffee:
       options:
         bare: true
-        sourceMap: false        
+        sourceMap: false
         #sourceRoot: 'js',
         join: false
 
@@ -31,19 +39,10 @@ module.exports = (grunt) ->
           name: "../js/r-config"
           out: "build/script.js"
 
-    uncss:
-      dist:
-        files:
-          "www/build/tidy.css": ["www/coffee/templates/photoDetailTml.html", "www/index.html", "www/coffee/templates/photoTml.html"]
-
-        
-        #stylesheets: ['www/css/bootstrap.css', 'www/css/bootstrap-theme.css', 'www/css/index.css']
-        csspath: "www/css"
-
     processhtml:
       dist:
         files:
-          "index.html": ["index.dev.html"]
+          "build/index.html": ["index.html"]
 
     cssmin:
       main:
@@ -59,10 +58,43 @@ module.exports = (grunt) ->
     htmlmin:
       main:
         options:
-          removeComments: true
+          collapseBooleanAttributes: true
           collapseWhitespace: true
+          removeAttributeQuotes: true
+          removeCommentsFromCDATA: true
+          removeEmptyAttributes: true
+          removeOptionalTags: true
+          removeRedundantAttributes: true
+          useShortDoctype: true
         files:
-          'index.html': 'index.html'
+          'build/index.html': 'build/index.html'
+          #expand: true
+    
+    imagemin:
+      dist:
+        files:[
+          expand: true
+          cwd: 'img/'
+          src: '**/*.{gif,jpeg,jpg,png}'
+          dest: 'build/img/'
+        ]
+
+    connect:
+      options:
+        port: 9000
+        livereload: 35729
+        hostname: 'localhost'
+      livereload:
+        options:
+          open: true
+      dist:
+        options:
+          open: true
+          base: 'build'
+          livereload: false
+
+    clean:
+      dist: 'build'
 
 
   grunt.loadNpmTasks "grunt-contrib-watch"
@@ -73,6 +105,11 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-cssmin"
   grunt.loadNpmTasks "grunt-contrib-uglify"
   grunt.loadNpmTasks "grunt-contrib-htmlmin"
+  grunt.loadNpmTasks "grunt-contrib-imagemin"
+  grunt.loadNpmTasks "grunt-contrib-connect"
+  grunt.loadNpmTasks "grunt-contrib-clean"
 
-  grunt.registerTask "default", ["watch"]
-  grunt.registerTask "build", ["uglify", "cssmin", "processhtml", "htmlmin"]
+  grunt.registerTask "dev", ['connect:livereload', "watch"]
+  grunt.registerTask "build", ["clean:dist", "uglify", "cssmin", "processhtml", "htmlmin", "imagemin"]
+  grunt.registerTask "dist", ["build", "connect:dist:keepalive"]
+  grunt.registerTask "default", ["dev"]
