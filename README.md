@@ -13,7 +13,7 @@ You can run the project directly by opening the index.html file in the browser.
 
 #Run on Web
 
-Inorder to run project for development in web browser, you need:
+In order to run project for development in web browser, you need:
 
 1. Have [NodeJs](nodejs.org) installed
 2. Have Grunt installed with cmd `npm install grunt-cli -g`
