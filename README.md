@@ -20,7 +20,7 @@ In order to run project for development in web browser, you need:
 3. Have Bower installed with `npm install bower -g`
 4. Navigate to the `www` folder of the project
 6. `npm install` and `bower install` to install project's dependancies
-7. `grunt dev` to run in development mode (coffee to js automation, livereload) or `grunt dist` to run in production mode with html,css,js minimized and all.
+7. `grunt dev` to run in development mode (coffee to js automation, livereload) or `grunt dist` to run in production mode with html, css, js minimized and all.
 
 #Run as Android App
 

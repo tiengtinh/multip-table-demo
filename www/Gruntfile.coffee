@@ -29,16 +29,6 @@ module.exports = (grunt) ->
         cwd: "coffee"
         ext: ".js"
 
-    requirejs:
-      compile:
-        options:
-          optimize: "none"
-          baseUrl: "./components"
-          include: "almond/almond"
-          mainConfigFile: "js/r-config.js"
-          name: "../js/r-config"
-          out: "build/script.js"
-
     processhtml:
       dist:
         files:
@@ -98,8 +88,7 @@ module.exports = (grunt) ->
 
 
   grunt.loadNpmTasks "grunt-contrib-watch"
-  grunt.loadNpmTasks "grunt-contrib-coffee"
-  grunt.loadNpmTasks "grunt-contrib-requirejs"
+  grunt.loadNpmTasks "grunt-contrib-coffee"  
   grunt.loadNpmTasks "grunt-newer"  
   grunt.loadNpmTasks "grunt-processhtml"  
   grunt.loadNpmTasks "grunt-contrib-cssmin"
