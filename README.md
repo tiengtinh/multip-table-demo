@@ -5,6 +5,8 @@ PhoneGap multiplication table app. Run on web browsers and mobile devices.
 
 *Believe it or not. The whole project on production is only `40.0KB` thanks to micro javascript frameworks [riotjs](https://github.com/moot/riotjs), [quojs](http://quojs.tapquo.com/).*
 
+[Online Demo](http://tiengtinh.github.io/multip-table-demo/www/build/)
+
 # Screenshot
 ![TodoMVC](screenshot.png)
 
