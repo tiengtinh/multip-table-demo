@@ -3,6 +3,8 @@ Multiplication Table App Demo
 
 PhoneGap multiplication table app. Run on web browsers and mobile devices.
 
+Live demo here [multip-table-demo](http://tiengtinh.github.io/multip-table-demo/www/build/)
+
 *Believe it or not. The whole project on production is only `40.0KB` thanks to micro javascript frameworks [riotjs](https://github.com/moot/riotjs), [quojs](http://quojs.tapquo.com/).*
 
 # Screenshot
